@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="Homepage.css">
+    <title>eLearn</title>
+    <!-- Add the following lines to the head section of your HTML file -->
+
+</head>
+
+<body>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <script src="1.js"></script>
+    <script src="https://kit.fontawesome.com/25dc582674.js" crossorigin="anonymous"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    <!-- Login page -->
+    <div class="overlay" onclick="closelogModel() , closesignModel()"></div>
+    <div class="loginpage container">
+        <span class="cross" onclick="closelogModel()">&times;</span>
+        <h3 class="form-title text-center my-3">Log In</h3>
+        <div class="d-flex">
+            <div class="signin-form">
+                <form>
+                    <div class="mb-3">
+                        <span><i class="fa-regular fa-user"></i></span>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Your Name">
+                    </div>
+                    <div class="mb-3">
+                        <span><i class="fa-solid fa-lock"></i></span>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" style="padding:0px;" id="exampleCheck1">
+                        <label class="form-check-label mx-3" for="exampleCheck1">Remember me</label>
+                    </div>
+                    <button type="button" class="btn btn-outline-info mx-2">Log In</button>
+                </form>
+                <div class="createaccount">
+                    <div class="container d-flex other-login mt-4">
+                        <p>Or Log In with</p>
+                        <i class="fa-brands fa-facebook "></i>
+                        <i class="fa-brands fa-twitter "></i>
+                        <i class="fa-brands fa-google "></i>
+                    </div>
+                    <div class="container other-logina my-3">
+                        <a href="#" onclick="showsignModel() , closeloginModel()">Create an account</a>
+                    </div>
+                </div>
+            </div>
+            <div class="logimg mx-3">
+                <img class="img-fluid mt-4" style="height:250px;" src="signin-image.jpg" alt="sing up image">
+            </div>
+        </div>
+
+    </div>
+    <!-- SignUp page -->
+    <div class="signuppage container">
+        <span class="cross" onclick="closelogModel() , closesignModel()">&times;</span>
+        <h3 class="form-title text-center my-3">Sign Up</h3>
+        <div class="d-flex">
+            <div class="signin-form">
+                <form>
+                    <div class="mb-3">
+                        <span><i class="fa-regular fa-user"></i></span>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Your Name">
+                    </div>
+                    <div class="mb-3">
+                        <span><i class="fa-sharp fa-regular fa-envelope"></i></span>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Your Email">
+                    </div>
+                    <div class="mb-3">
+                        <span><i class="fa-solid fa-lock"></i></span>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="mb-3">
+                        <span><i class="fa-solid fa-lock"></i></span>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Repeat your Password">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" style="padding:0px;" id="exampleCheck1">
+                        <label class="form-check-label mx-2" for="exampleCheck1">I agree all statements in <a style="color: black;" href="">Terms of service</a></label>
+                    </div>
+                    <button type="button" class="btn btn-outline-info mx-2 my-3">Sign Up</button>
+                </form>
+                <div class="createaccount">
+                    <div class="container other-logina my-3">
+                        <a href="#" onclick="showlogModel() , closesignupModel()">I am already a Member</a>
+                    </div>
+                </div>
+            </div>
+            <div class="logimg">
+                <img class="img-fluid mt-4 mx-3" style="height:250px;" src="signup-image.jpg" alt="sing up image">
+            </div>
+        </div>
+
+    </div>
+    <!-- Navbar  -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light "
+        style=" z-index: 2; width: 100%;">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation" onclick="dark()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">eLearn</a>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/About Us/about.html" target="_blank">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+
+                </ul>
+                <div class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-info me-2" style="width: 100px;" onclick="showlogModel()">Login</button>
+                    <button class="btn btn-outline-info " style="width: 160px; "  onclick="showsignModel()">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- carousel -->
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="img6.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block ">
+                    <h1 class="p1 fw-bold ">Take your time and learn everything</h1>
+                    <p class="p12 ">Discover a world of knowledge at your fingertips with our innovative <br> e-learning
+                        platform. Our website offers a wide range of courses, <br> delivered by experienced instructors,
+                        to help you
+                        enhance <br> your skills and achieve your goals. </p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="img4.jpg" class="d-block w-100" alt="...">
+
+            </div>
+            <div class="carousel-item">
+                <img src="img3.jpg" class="d-block w-100" alt="...">
+
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- Why Choose Us -->
+    <div class="d2 container-fluid py-5">
+        <div class="contain-fluid">
+            <h1 class="text-center pt-2"> Why choose us?</h1>
+            <p class="pd2 text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque natus
+                perferendis
+                perspiciatis <br> quae porro temporibus officiis neque libero doloremque. Lorem ipsum dolor sit amet,
+                <br> consectetur adipisicing elit.Optio, ad!
+            </p>
+        </div>
+
+        <div class="d21 mt-5">
+            <div class="d211 row">
+
+
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-3 col-md-4"><img src="Forma 1.png" alt=""></div>
+                        <div class="col-9 col-md-8 pt-3">
+                            <h4>Virtual Academy</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Quam, expedita.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-3 col-md-4"><img src="Shape 3.png" alt=""></div>
+                        <div class="col-9 col-md-8 pt-3">
+                            <h4>Model Test</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Quam, expedita.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d212 row mt-5">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-3 col-md-4"><img src="Shape 2.png" alt=""></div>
+                        <div class="col-9 col-md-8 pt-3">
+                            <h4> Awsome Support</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Quam, expedita.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-3 col-md-4"><img src="Forma 2.png" alt=""></div>
+                        <div class="col-9 col-md-8 pt-3">
+                            <h4>Certifications</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Quam, expedita.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Which One You Interested? -->
+    <div class="d3 container-fluid">
+        <div class="p-3 mt-4 ml-5">
+            <h3 class="hd3 fw-bold">Which One You Interested?</h3>
+            <p class="hd33">Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>Dolorum commodi ex labore
+                magnam perferendis voluptas quas<br>consequuntur doloremque repudiandae itaque?</p>
+        </div>
+
+        <div class="d33">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-3 col-md-2"><i class="i1 fa-solid fa-wand-magic-sparkles"></i></div>
+                        <div class="col-9 col-md-10">
+                            <h4>Graphic Design</h4>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias velit similique atque
+                                ut tempore soluta doloribus illo assumenda aperiam quaerat!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-3 col-md-2"><i class="i1 fa-solid fa-flask-vial"></i></div>
+                        <div class="col-9 col-md-10">
+                            <h4>Applied Chemistry</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam recusandae voluptas
+                                nisi facilis dolores sequi minus mollitia sit! Esse, similique?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row pt-5">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-3 col-md-2"><i class="i1 fa-sharp fa-regular fa-file-code"></i></div>
+                        <div class="col-9 col-md-10">
+                            <h4>Web Development</h4>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam ipsam assumenda ipsa
+                                sapiente deserunt. Culpa ea eius delectus neque non?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-3 col-md-2"><i class="i1 fa-solid fa-laptop-code"></i></div>
+                        <div class="col-9 col-md-10">
+                            <h4>Computer Programming</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit dolore explicabo
+                                necessitatibus dolorem maiores numquam dolorum rem amet exercitationem esse.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row pt-5">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-3 col-md-2"><i class="i1 fa-solid fa-square-root-variable"></i></div>
+                        <div class="col-9 col-md-10">
+                            <h4>Mathematics</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas sunt quasi obcaecati
+                                ratione eum nesciunt veritatis placeat adipisci odio perspiciatis.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-3 col-md-2"><i class="i1 fa-solid fa-biohazard"></i></div>
+                        <div class="col-9 col-md-10">
+                            <h4>Bioinformatics</h4>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit voluptatibus neque
+                                repudiandae magni porro sed, sunt temporibus aut repellendus at.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Latest Courses -->
+    <div class="d4 container-fluid">
+        <div class="d44">
+            <h2 class="ml-5 pt-5">Latest Courses</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing <br> elit. Dignissimos, esse eaque itaque id
+                voluptatibus modi.</p>
+        </div>
+
+
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="lc.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="lc1.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                                content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="lc3.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This card has even longer content than the first to show that equal
+                                height action.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Instructors -->
+    <div class="d5 container-fluid">
+        <h2 class="d51 p-3 fw-bold ml-5">Our Instructors</h2>
+
+        <div class="d55  row row-cols-1  row-cols-md-2 g-4 justify-content-center">
+            <div class="col">
+                <div class=" c1 card ">
+                    <img src="t1" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class=" c1 card">
+                    <img src="t2" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class=" c1 card">
+                    <img src="t3" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class=" c1 card">
+                    <img src="t4" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-3">
+                    <h3>eLearn</h3>
+                    <ul>
+                        <li>Privacy Policy</li>
+                        <li>© eLearn 2023, All rights reserved</li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-2">
+                    <h5>Home</h5>
+                    <ul>
+                        <li>Home</li>
+                        <li>About Us</li>
+                        <li>Services</li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <h5>Latest Courses</h5>
+                    <ul>
+                        <li>App Development</li>
+                        <li>Web Development</li>
+                        <li>Graphic Designing</li>
+                        <li>Game Development</li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-2">
+                    <h5>Community</h5>
+                    <ul>
+                        <li>Team Plans</li>
+                        <li>Refer a Friend</li>
+                        <li>Go Premium</li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-2">
+                    <h5>Stay Connected</h5>
+                    <ul>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>LinkedIn</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
